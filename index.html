@@ -1,7 +1,7 @@
 <html>
   <head>
-    <meta title="AR JS Demos" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta title="AR JS Demos" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <style>
                 html {
                         font-family: 'Operator Mono', 'Monaco', 'Andale Mono', monospaced;
@@ -12,20 +12,72 @@
                         margin: 0 auto;
                         padding: 1.4em;
                 }
+                .section {
+                        border-bottom: 1px dashed #6D868E;
+                }
         </style>
         <script>
         if (location.protocol != 'https:') {
-         location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+         //location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
         }
         </script>
-
   </head>
   <body>
           <h1>Web AR/AR.js Demos</h1>
-          <ul>
-                  <li>
-                          <a href="/transparent-png">Transparent PNG</a>
-                  </li>
-          </ul>
+
+          <div class="section">
+                <a href="/transparent-png">
+                        <h3>
+                                Transparent PNG
+                        </h3>
+                </a>
+                <p>
+                A transparent PNG. This is a super simple demo. There is almost nothing to it.
+                These are the default settings except for the sizing, which was specified to
+                avoid distorting the image.
+                </p>
+                <p>
+                <b>Marker</b>: Default
+                </p>
+          </div>
+
+          <div class="section">
+                <a href="/transparent-png-II">
+                        <h3>
+                                Transparent PNG: Floating
+                        </h3>
+                </a>
+                <p>
+                Same concept as above but the image is floating higher above the marker.
+                You may need to back away from the marker a bit.
+                </p>
+                <p>
+                <b>Marker</b>: Default
+                </p>
+          </div>
+
+          <div class="section">
+                <a href="/transparent-png-curved">
+                        <h3>
+                                Curved Transparent PNG
+                        </h3>
+                </a>
+                <p>
+                This uses the <a href="https://aframe.io/docs/0.7.0/primitives/a-curvedimage.html">a-curvedimage</a> element
+                instead of the <a href="https://aframe.io/docs/0.7.0/primitives/a-image.html">a-image</a> element.
+                </p>
+                <p>
+                <b>Marker</b>: Default
+                </p>
+          </div>
+
+          <div class="section" style="padding: 1.2em">
+                <details>
+                        <summary>Caveats</summary>
+                <p>
+                Marker must be clearly visible and not distorted. Even slight curves are enough to skew detection.
+                </p>
+                </details>
+          </div>
   </body>
 </html>
