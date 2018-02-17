@@ -1,0 +1,1 @@
+ffmpeg -i "C:\Users\Alva\Documents\Photogrammetry Outsourcing\2018.01.18 Lima Model V3\Assets\StreamingAssets\sensor_01_14_16_14_47_upres.mp4" -c:v libvpx -minrate 1M -maxrate 1M -b:v 1M -c:a libvorbis "C:\Users\Alva\Videos\AR Stuff\sensor_01_14_16_14_47_upres.webm"

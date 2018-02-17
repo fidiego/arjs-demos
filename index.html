@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
         <meta title="AR JS Demos" />
@@ -17,7 +18,7 @@
                 }
         </style>
         <script>
-        if (location.protocol != 'https:') {
+        if (location.hostname !== 'localhost' && location.protocol != 'https:') {
          location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
         }
         </script>
@@ -29,7 +30,13 @@
           <p>
           Print out <a href="/static/img/HIRO.jpg" target="_blank">this marker image</a> then click on one of the demo's and point your camera at it.
           </p>
-
+        <details>
+                <summary>Caveats</summary>
+        <ul>
+                <li>Marker must be clearly visible and not distorted. Even slight curves are enough to skew detection.</li>
+                <li>If nothing appears, try pointing away from the marker then pointing at the marker again.</li>
+        </ul>
+        </details>
           <hr/>
           <div class="section">
                 <a href="/transparent-png">
@@ -96,14 +103,23 @@
                 </p>
           </div>
 
-          <div class="section" style="padding: 1.2em">
-                <details>
-                        <summary>Caveats</summary>
-                <ul>
-                        <li>Marker must be clearly visible and not distorted. Even slight curves are enough to skew detection.</li>
-                        <li>If nothing appears, try pointing away from the marker then pointing at the marker again.</li>
-                </ul>
-                </details>
+          <div class="section">
+                <a href="/depthkit">
+                        <h3>
+                                DepthKit
+                        </h3>
+                </a>
+                <p>
+                <a href="https://www.depthkit.tv/" target="_blank">DepthKit</a> allows for some pretty cool volumetric
+                video capture so you can do some neat things with video. This demo embeds some depthkit content in a-frame.
+                </p>
+                <p>
+                This loads a really really big file so view over wifi and it make take a while.
+                </p>
+                <p>
+                <b>Marker</b>: Default
+                </p>
           </div>
+
   </body>
 </html>

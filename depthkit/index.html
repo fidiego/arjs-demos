@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta title="Transparent PNG Demo" />
+    <meta charset="UTF-8">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="/static/js/depthkit.min.js"></script>
+    <script src="/static/js/aframe.depthkit.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-anchor>
+        <a-entity depthkit="type: wire;
+                                  metaPath: ../static/scenes/depthkit/_meta_sensor_01_14_16_14_47_upres.txt;
+                                  videoPath: ../static/scenes/depthkit/sensor_01_14_16_14_47_upres.webm;
+                                  autoplay: true;
+                                  loop: true;" />
+      </a-anchor>
+      <a-camera-static />
+    </a-scene>
+  </body>
+</html>
