@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta title="Transparent PNG Demo" />
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+  </head>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+      <a-anchor>
+         <a-entity text="
+                 font: mozillavr;
+                 align: center;
+                 width: 6;
+                 color: green;
+                 value: If none of us own acres,\nif none of use grow wheat,\nthen who will feed our people\nwhen our people need to eat?"></a-entity>
+      </a-anchor>
+      <a-camera-static />
+    </a-scene>
+  </body>
+</html>
